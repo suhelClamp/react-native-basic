@@ -32,6 +32,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: SIZES.medium,
     height: "100%",
+    display: "flex",
+    flexDirection: "row"
   },
   searchInput: {
     fontFamily: FONT.regular,

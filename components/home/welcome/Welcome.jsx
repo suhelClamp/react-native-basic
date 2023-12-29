@@ -5,6 +5,8 @@ import styles from './welcome.style'
 import {useRouter} from "expo-router";
 import {icons} from "../../../constants";
 
+const data = ["USDC-WBTC", "USDC-WETH", "WBTC-WETH"]
+
 const Welcome = () => {
     const router = useRouter()
     return (
@@ -21,13 +23,21 @@ const Welcome = () => {
                             onChange={() => {
                             }}
                         />
-                        {/*<TouchableOpacity style={styles.searchBtn} onPress={() => {*/}
-                        {/*}}>*/}
-                        {/*    <Image source={icons.search} resizeMethod="scale" style={styles.searchBtnImage}/>*/}
-                        {/*</TouchableOpacity>*/}
+                        <TouchableOpacity style={styles.searchBtn} onPress={() => {
+                        }}>
+                            <Image source={icons.search} resizeMethod="scale" style={styles.searchBtnImage}/>
+                        </TouchableOpacity>
                     </View>
                 </View>
+
             </View>
+            {/*<View style={styles.tabsContainer}>*/}
+            {/*    <FlatList data={data} renderItem={({item}) => (*/}
+            {/*        <TouchableOpacity>*/}
+            {/*            <Text>{item}</Text>*/}
+            {/*        </TouchableOpacity>*/}
+            {/*    )}/>*/}
+            {/*</View>*/}
         </View>
     )
 }
